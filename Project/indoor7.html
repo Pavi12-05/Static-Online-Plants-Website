@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant Shop</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      line-height: 1.6;
+  }
+
+  header {
+      display: flex;
+      flex-direction: column; /* Changed to column */
+      align-items: flex-end; /* Align to the right */
+      padding: 5px 10px;
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+  }
+
+  .top-row { /* New container for top elements */
+      display: flex;
+      justify-content: space-between;
+      width: 100%; /* Occupy full width */
+      align-items: center;
+  }
+
+  .logo {
+      display: flex;
+      align-items: center;
+  }
+
+  .logo img {
+      width: 70px;
+      height: 70px;
+      border-radius: 70%;
+      margin-right: 20px;
+  }
+
+  .logo span {
+      font-size: 20px;
+      font-weight: bold;
+      color: black;
+  }
+
+  .logo span strong {
+      color: #3CB043; /* Green color */
+  }
+
+  nav ul {
+      list-style: none;
+      padding: 0px;
+      margin-right:70px ;
+      display: flex;
+  }
+
+  nav li {
+      margin-left: 20px;
+  }
+
+  nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: smaller;
+      transition: color 0.3s;
+  }
+
+  nav a:hover {
+      color: #3CB043; /* Green color */
+  }
+
+  .search-container {
+      display: flex;
+      align-items: center;
+      width: 100%; /* Fill available space */
+      max-width: 500px; /* Limit width on larger screens */
+      margin-top: -10px;
+      margin-bottom: 10px;
+  }
+  
+  .search-bar {
+      display: flex;
+      align-items: center;
+      width: 100%;  /* Important: make it wide */
+      max-width: 100%; /* Optional: responsive, fill container */
+  }
+  
+  .search-bar input {
+      flex: 1;  /* Key: let input take up the remaining space */
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px 0 0 5px;
+      outline: none;
+  }
+  
+  /* Optional: responsive adjustments */
+  @media (max-width: 600px) {
+      .search-container {
+          max-width: 100%; /* Fill the entire width on smaller screens */
+      }
+  
+      .search-bar {
+          max-width: 100%; /* Fill the entire width on smaller screens */
+      }
+  }
+
+  .search-bar button {
+      padding: 10px 15px;
+      background-color: #3CB043; /* Green color */
+      color: #fff;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  }
+
+  .search-bar button:hover {
+      background-color: #3CB043; /* Darker green color */
+  }
+
+  .icons {
+      display: flex;
+      align-items: center;
+      margin-left: 20px; /* Add spacing between search bar and icons */
+  }
+
+  .icons a {
+      margin-left: 20px;
+      color: black;
+      font-size: 20px;
+      text-decoration: none;
+      transition: color 0.3s;
+  }
+
+  .icons a:hover {
+      color: #3CB043 /* Green color */
+  }
+
+  .category-bar {
+      background-color: #3CB043; /* Green color */
+      color: #fff;
+      padding: 5px 20px;
+      text-align: center;
+  }
+
+  .category-bar a {
+      color:black;
+      text-decoration: none;
+      margin: 0 15px;
+      margin-left: 100px;
+      font-weight: bold;
+      transition: color 0.3s;
+  }
+
+  .category-bar a:hover {
+      color: #ddd;
+  }
+   
+  
+  .container {
+    width:1000px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    height: 500px;
+  }
+  
+  .image-container {
+    width: 350px;
+    margin-right: 80px;
+  }
+  
+  .image-container img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    padding: 0px;
+  }
+  
+  .text-container {
+    flex: 1;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .price {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 15px;
+  }
+  
+  .description {
+    font-size: 14px;
+    color:black;
+    line-height: 1.5;
+  }
+  
+  .add-to-cart-button {
+    background-color:#3CB043 ;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-block; /* Ensure the button takes up only necessary width */
+  }
+  
+  .add-to-cart-button:hover {
+    background-color: #3CB043;
+  }
+  </style>
+  </head>
+  <header>
+    <div class="top-row">
+      <div class="logo">
+          <img src="logo.png" alt="Plant Logo">
+          <span>BLOW AND <strong>GROW</strong></span>
+      </div>
+
+      <nav>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">FAQ'S</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="search-container">
+    <div class="search-bar">
+        <input type="text" placeholder="Search here">
+        <button>🔍</button>
+    </div>
+    <div class="icons">
+        <a href="#">
+            <img src="login.png" alt="Person Icon" width="30" height="30">
+        </a>
+        <a href="#">
+            <img src="cart.png" alt="Shopping Cart Icon" width="30" height="30">
+        </a>
+    </div>
+</div>
+</header>
+
+<div class="category-bar">
+<a href="#">Flower plant's</a>
+<a href="#">Indoor plant's</a>
+<a href="#">Pot Plant's</a>
+<a href="#">Fruit And Tree</a>
+</div>
+<div class="container">
+  <div class="image-container">
+    <img src="indoor7.jpg" alt="">
+  </div>
+  <div class="text-container">
+    <h2 class="title">Bronze Syngonium</h2>
+    <p class="price">Rs.120</p>
+    <p class="description">Syngonium podophyllum plant is the compact houseplant with bushy plant growth.Leaves are heart shaped with bronze color foliage.Plant grows up to the height of 13 meters tall.</p>
+    <a href="addedcart2.html">
+    <button class="add-to-cart-button">ADD To Cart</button>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>

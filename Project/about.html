@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Plant Shop</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column; 
+            align-items: flex-end; 
+            padding: 5px 10px;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+        }
+
+        .top-row { 
+            display: flex;
+            justify-content: space-between;
+            width: 100%; 
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 70px;
+            height: 70px;
+            border-radius: 70%;
+            margin-right: 20px;
+        }
+
+        .logo span {
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .logo span strong {
+            color: #3CB043; 
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0px;
+            margin-right:70px ;
+            display: flex;
+        }
+
+        nav li {
+            margin-left: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: smaller;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #3CB043; 
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            width: 100%; 
+            max-width: 500px; 
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+        
+        .search-bar {
+            display: flex;
+            align-items: center;
+            width: 100%;  
+            max-width: 100%; 
+        }
+        
+        .search-bar input {
+            flex: 1;  
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+        
+        
+        @media (max-width: 600px) {
+            .search-container {
+                max-width: 100%;
+            }
+        
+            .search-bar {
+                max-width: 100%; 
+            }
+        }
+
+        .search-bar button {
+            padding: 10px 15px;
+            background-color: #3CB043; 
+            color: #fff;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .search-bar button:hover {
+            background-color: #3CB043; 
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+            margin-left: 20px; 
+        }
+
+        .icons a {
+            margin-left: 20px;
+            color: black;
+            font-size: 20px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .icons a:hover {
+            color: #3CB043 
+        }
+
+        .category-bar {
+            background-color: #3CB043;
+            color: #fff;
+            padding: 5px 20px;
+            text-align: center;
+        }
+
+        .category-bar a {
+            color:black;
+            text-decoration: none;
+            margin: 0 15px;
+            margin-left: 100px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .category-bar a:hover {
+            color: #ddd;
+        }
+
+        .about-section {
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-section > div {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .about-section h2 {
+            color: #3CB043; 
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .about-section h3 {
+            color: black;
+            margin-bottom: 15px;
+        }
+
+        .about-section p, .about-section ul {
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        .about-section ul {
+            padding-left: 20px;
+        }
+
+        .about-section li {
+            margin-bottom: 10px;
+        }
+
+        
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+            }
+
+            .top-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .logo {
+                margin-bottom: 5px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav li {
+                margin: 10px 0;
+            }
+
+            .search-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .search-bar {
+                margin-top: 5px;
+            }
+
+            .about-section {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .about-section > div {
+                padding: 0;
+                margin-bottom: 30px;
+            }
+
+            .about-section h2 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-row">
+            <div class="logo">
+                <img src="logo.png" alt="Plant Logo">
+                <span>BLOW AND <strong>GROW</strong></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="faq.html">FAQ'S</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="text" placeholder="Search here">
+                <button>🔍</button>
+            </div>
+            <div class="icons">
+                <a href="login.html">
+                    <img src="login.png" alt="Person Icon" width="30" height="30">
+                </a>
+                <a href="cart1.html">
+                    <img src="cart.png" alt="Shopping Cart Icon" width="30" height="30">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="category-bar">
+        <a href="#">Flower plants</a>
+        <a href="#">Indoor plant's</a>
+        <a href="#">Pot plants</a>
+        <a href="#">Fruit And Tree</a>
+    </div>
+
+    <section class="about-section">
+        <div>
+            <h2>About BLOW AND GROW</h2>
+            <p>At Blow and Grow, we believe that plants can bring life to any space—whether it's a small apartment, a home office, or your garden. Our goal is to connect people with plants that suit their lifestyle and skill level, making plant care easy and accessible for everyone.</p>
+            <p>Founded in 2020, we started with a simple vision: to help more people discover the joy of plants. Since then, we've grown into a trusted online destination for all things green, offering everything from trendy houseplants to eco-friendly pots and tools.</p>
+        </div>
+        <div>
+            <h2>What Sets Us Apart:</h2>
+            <ul>
+                <li>Curated Plant Selections: Handpicked plants to suit every space and lifestyle.</li>
+                <li>Expert Advice: Our plant care experts are here to help you succeed.</li>
+                <li>Sustainable Practices: We care for the environment and prioritize eco-friendly products.</li>
+            </ul>
+            <p>We're here to help you build your own green sanctuary, whether you're a plant novice or a seasoned plant parent.</p>
+            <p>Join the Blow and Grow family today and bring nature into your home!</p>
+        </div>
+    </section>
+
+    
+</body>
+</html>
+
+
